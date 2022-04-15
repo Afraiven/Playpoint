@@ -46,20 +46,23 @@
     font-size: 35px;
 }
 
-html {
-    overflow-y: scroll; 
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
-
-body {
+* {
     margin: 0;
     padding: 0;
 }
 
-.container {
-    position: relative;
+body {
+    height: 100vh;
+    overflow: hidden;
+}
 
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 .navbar {
@@ -98,9 +101,10 @@ nav div h2{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     position: fixed;
     right: 0px;
-    width: 30%;
+    width: calc(30% - 10px);
     height: 100vh;
     background-image: linear-gradient(#3728a5, #7b4cbb);
+    margin-right: 10px;
 }
 
 #player_container {
@@ -206,8 +210,8 @@ nav div h2{
 
 
 #left_side {
-    width: 70%;
-    height: 70%;
+    width: calc(70% + 10px);
+    height: calc(100% - 10vh);
     background-color: #f2f0fb;
     scroll-snap-align: center;
 }
@@ -221,8 +225,7 @@ nav div h2{
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 85vh;
-    padding-top: 15vh;
+    height: 100%;
 }
 
 
