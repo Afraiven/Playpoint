@@ -132,6 +132,7 @@ nav div h2{
     justify-content: center;
     align-items: center;
     align-content: center;
+    z-index: 101;
 }
 
 .newsletter {
