@@ -4,46 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>PlayPoint</title>
 </head>
 <body>
-    <main>
-        <div id="left_side">
-            <nav>
+        <div id="container">
+            <nav class="navbar">
                 <img src="play_point_fulllogo.png" alt="">
                 <div>
-                    <h2>Home</h2>
-                    <h2>Turnieje</h2>
-                    <h2>Kontakt</h2>
-                    <h2>Kontakt</h2>
-                    <h2><button>Lorem ipsum</button></h2>
+                    <a href="#aktualnosci"><h2>Aktualności</h2></a>
+                    <a href="#o_nas"><h2>O nas</h2></a>
+                    <a href="#darczyncy"><h2>Darczyńcy</h2></a>
+                    <a href="#kontakt"><h2>Kontakt</h2></a>
+                    <a href="#materialy"><h2>Materiały</h2></a>
+                    <a href="#wesprzyj"><h2>Wesprzyj</h2></a>
                 </div>
             </nav>
-            <section>
+            <div id="right_side">
+                
+                <div id="player_container" class="player_container hide">
+                    <img id="player" src="https://pro-gamer.pl/wp-content/uploads/2020/09/pro-gamer-to-gracze-1.jpg" alt="">
+                </div>
+                <div id="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+                <div id="newsletter" class="newsletter hide">
+                    <h2>Dołącz do naszego newslettera, aby być na bierząco z naszymi:</h2>
+                    <h3>turniejami</h3>
+                    <h3>konkursami</h3>
+                    <h3>informacjami</h3>
+                    <input type="text" id="gmail" placeholder="Podaj swój adres e-mail">
+                    <button id="bt_gmail">Dołącz</button>
+                </div>
+            </div>
+        
+        <div id="left_side">
+            <section id="aktualnosci">
                 <article>
                     <h4>lorem ipsum dolor</h4>
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor enim, elementum vel mattis non, viverra ac velit. Nunc tempor ligula nisl, eu lobortis felis semper quis. Etiam a justo id neque lobortis sagittis. Maecenas sagittis tellus non elit suscipit tincidunt. Nulla convallis, arcu iaculis ullamcorper tristique, est nibh porttitor justo, eget tempus nibh lorem sed diam. Duis luctus diam turpis, ullamcorper auctor velit dignissim at. Mauris non tristique quam, nec facilisis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam in ex vitae felis interdum sagittis. Praesent vel urna eget erat luctus aliquam in in velit. In at lectus accumsan, auctor est a, elementum nibh.</h3>
-                    
                     <button>Lorem ipsum</button>
                 </article>
             </section>
         </div>
-        <div id="right_side">
-            <nav>
-            </nav>
-            <div id="team_container">
-                <img id="team" src="https://pro-gamer.pl/wp-content/uploads/2020/09/pro-gamer-to-gracze-1.jpg" alt="">
-            </div>
-            <div id="social">
-                playpoint
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111564.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111819.png" alt="">
-                
-            </div>
+            <div id="left_side">
+                <section id="o_nas" class="o_nas">
+                    <article style="width: 80%; padding-right: 0px;">
+                        <h4>lorem ipsum dolor</h4>
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dolor enim, elementum vel mattis non, viverra ac velit. Nunc tempor ligula nisl, eu lobortis felis semper quis. Etiam a justo id neque lobortis sagittis. Maecenas sagittis tellus non elit suscipit tincidunt. Nulla convallis, arcu iaculis ullamcorper tristique, est nibh porttitor justo, eget tempus nibh lorem sed diam. Duis luctus diam turpis, ullamcorper auctor velit dignissim at. Mauris non tristique quam, nec facilisis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam in ex vitae felis interdum sagittis. Praesent vel urna eget erat luctus aliquam in in velit. In at lectus accumsan, auctor est a, elementum nibh.</h3>
+                        <button>Lorem ipsum</button>
+                    </article>
+                </section>
         </div>
-    </main>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            const form = document.querySelector(".newsletter");
+            const obraz = document.querySelector(".player_container");
+            const sectionTwo = document.querySelector(".o_nas");
+
+            let ilosc = 0
+
+            const options = {
+            threshold: 0,
+            rootMargin: "-150px"
+            };
+
+            const observer = new IntersectionObserver(function(
+            entries,
+            observer
+            ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    if (ilosc>0) {
+                        form.classList.remove("animation_show");
+                        form.classList.add("hide")
+                        obraz.classList.remove("hide")
+                        obraz.classList.add("animation_show")
+                    }
+                    else {
+                        obraz.classList.remove("hide");
+                        ilosc+=1;
+                    }
+                } else {
+                    if (ilosc>0) {
+                    obraz.classList.remove("animation_show")
+                    obraz.classList.add("hide")
+                    form.classList.remove("hide");
+                    form.classList.add("animation_show");
+                    }
+                    else {
+                        form.classList.remove("hide");
+                        ilosc+=1;
+                    }
+                }
+            });
+            },
+            options);
+
+            observer.observe(sectionTwo);
+        </script> 
 </body>
 </html>

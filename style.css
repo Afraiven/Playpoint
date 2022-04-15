@@ -7,35 +7,65 @@
     src: url("fonts/Cocogoose Pro Thin-trial.ttf");
 }
 
-/* CUSTOMOWY SCROLLBAR */
-    /* width */
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
+/* CUSTOMOWY SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: #8a005571
-    }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #29008a71
+}
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 
+/* Social icons */
+.fa {
+    padding: 25px;
+    width: 35px; /* Taka sama wielkość jak font-size w .fa::before */
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 5px 2px;
+    box-sizing: inherit;
+    text-align: center;
+    color: white;
+    margin-left: 15px;
+  }
+.fa:hover {
+    background: #6629ac;
+}
+.fa::before {
+    font-size: 35px;
+}
+
+html {
+    overflow-y: scroll; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Cocogoose';
 }
-nav {
-    width: 100%;
-    height: 15vh;
+
+.container {
+    position: relative;
+
+}
+
+.navbar {
+    position: fixed;
+    width: 70%;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -44,65 +74,143 @@ nav {
     align-content: center;
     color: #868686;
     font-family: 'CocogooseThin' !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    z-index: 100;
 }
-
-nav img {
+.navbar a {
+    text-decoration: none;
+}
+.navbar img {
     height: 60%;
-    margin-left: 5vw;
+    margin-left: 3vw;
 }
-
 nav div {
     margin-right: 3vw;
-    margin-top: 2vh;
 }
 nav div h2{
     float: left;
     margin-left: 2vw;
 }
 
-main {
+
+#right_side {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    position: fixed;
+    right: 0px;
+    width: 30%;
+    height: 100vh;
+    background-image: linear-gradient(#3728a5, #7b4cbb);
+}
+
+#player_container {
+    position: absolute;
+    margin-top: 16vh;
+    margin-left: -15vw;
+    width: 35vw;
+    height: 30vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#player {
+    /* height: 61vh; */
+    width: 100%;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
-#left_side nav div h2 button{
-    margin-top: -16px;
-    letter-spacing: 1px;
-	background: none;
-	padding: 16px;
-	cursor: pointer;
-    font-family: 'Cocogoose';
-    border-radius: 50px;
-    background-color: #e978bc;
+#social {
+    position: fixed;
+    bottom: 3vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.newsletter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#gmail {
+    width: 50%;
+    height: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#bt_gmail {
+    width: 20%;
+    background-color: #402099;
     color: white;
-    transition: all .4s;
-    font-size: .7em;
-    border: 2px solid #e978bc;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-#left_side nav div button:hover { 
-    border: 2px solid #e978bc;
-	color: #e978bc;
-    background-color: #fff;
+  
+#bt_gmail:hover {
+    background-color: #240d63;
 }
+
+.newsletter h2 {
+    width: 80%;
+    padding-bottom: 10px;
+    color: white;
+}
+.newsletter h3 {
+    width: 70%;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.hide {
+    opacity:0;
+    left:-100%;
+    visibility: hidden;
+}
+
+.animation_show {
+    animation: Show 1s forwards;
+}
+
+
+@keyframes Show {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+    }
+
+
 
 #left_side {
     width: 70%;
-    min-height: 200vh;
+    height: 70%;
     background-color: #f2f0fb;
+    scroll-snap-align: center;
 }
-#right_side {
-    position: fixed;
-    right: 0;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    float: right;
-    min-width: 30%;
-    min-height: 100vh;
-    background-image: linear-gradient(#3728a5, #7b4cbb);
-}
+
 
 #left_side section {
     display: flex;
@@ -113,11 +221,9 @@ main {
     align-content: center;
     width: 100%;
     height: 85vh;
+    padding-top: 15vh;
 }
 
-#left_side nav {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
 
 #left_side section article{
     width: 60%;
@@ -154,41 +260,3 @@ main {
     background-color: #e978bc;
     color: white;
 }
-
-#team_container {
-    margin-top: 8vh;
-    margin-left: -15vw;
-    width: 35vw;
-    height: 30vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-#team {
-    /* height: 61vh; */
-    width: 100%;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-}
-
-#social {
-    color: #e978be;
-    position: fixed;
-    bottom: 3vh;
-    width: 30vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-#social img {
-    width: 8%;
-    margin-left: 1vw;
-    filter: invert(90%);
-}
-  
