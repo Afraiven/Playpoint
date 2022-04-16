@@ -273,8 +273,8 @@ nav div h2{
 
 
 #left_side section article{
-    width: 60%;
-    min-height: 70%;
+    width: 50%;
+    min-height: 60%;
     padding-right: 20%;
 }
 
@@ -306,4 +306,31 @@ nav div h2{
 #left_side section article button:hover { 
     background-color: #e978bc;
     color: white;
+}
+
+#left_side .o_nas {
+align-content: flex-start;
+}
+.tytul_dzialanosci{
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.zbior_pol_dzialanosci {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+.pole_dzialalnosci {
+    width: 16%;
+    text-align: center;
+    margin-right: 4%;
+}
+
+.pole_dzialalnosci h1 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
