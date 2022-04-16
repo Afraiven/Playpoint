@@ -157,8 +157,13 @@ nav div h2{
     border-radius: 40px;
     background-color: white;
     display:inline-block;
-    border: 1px rgba(255, 255, 255, 0.788) solid;
+    border: 1px white solid;
     margin-top: 7px;
+}
+
+.rectangle:hover {
+    background-color: rgb(65, 10, 102);
+    border: 1px rgb(49, 8, 77) solid;
 }
 
 .change_color_rectangle {
