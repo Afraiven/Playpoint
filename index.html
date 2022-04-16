@@ -86,7 +86,8 @@
                         form.classList.remove("animation_show");
                         form.classList.add("hide")
                         obraz.classList.remove("hide")
-                        obraz.classList.add("animation_show")
+                        // obraz.classList.add("animation_show")
+                        obraz.classList.add("animation_move")
                     }
                     else {
                         obraz.classList.remove("hide");
@@ -94,7 +95,7 @@
                     }
                 } else {
                     if (ilosc>0) {
-                    obraz.classList.remove("animation_show")
+                    obraz.classList.remove("animation_move")
                     obraz.classList.add("hide")
                     form.classList.remove("hide");
                     form.classList.add("animation_show");

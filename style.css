@@ -195,17 +195,28 @@ nav div h2{
     animation: Show 1s forwards;
 }
 
+.animation_move {
+    animation: Move 0.7s forwards;
+}
 
 @keyframes Show {
-    0%{
-        visibility: hidden;
-        opacity: 0;
+        0%{
+            visibility: hidden;
+            opacity: 0;
         }
-    100%{
-        opacity: 1;
-        visibility: visible;
+        100%{
+            opacity: 1;
+            visibility: visible;
+        }
     }
-    }
+
+    @keyframes Move {
+        0%{
+            transform: translateX(15vw);
+            opacity: 1;
+            visibility: visible;
+            }
+        }
 
 
 
