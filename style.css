@@ -212,7 +212,7 @@ nav div h2{
 
     @keyframes Move {
         0%{
-            transform: translateX(15vw);
+            transform: translateX(20vw);
             opacity: 1;
             visibility: visible;
             }
