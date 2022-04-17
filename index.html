@@ -21,18 +21,17 @@
                     <a href="#wesprzyj"><h2>Wesprzyj</h2></a>
                 </div>
             </nav>
+            <div class="nawigatory">
+                <a href="#aktualnosci" class="rectangle" id="rectangle_1" style="margin-top: 0px;"></a>
+                <a href="#o_nas" class="rectangle" id="rectangle_2"></a>
+                <a href="#" class="rectangle" id="rectangle_3"></a>
+                <a href="#" class="rectangle" id="rectangle_4"></a>
+            </div>
             <div id="right_side">
-                
                 <div id="player_container" class="player_container hide">
                     <img id="player" src="https://pro-gamer.pl/wp-content/uploads/2020/09/pro-gamer-to-gracze-1.jpg" alt="">
                 </div>
                 <div id="social">
-                    <div class="nawigatory">
-                        <a href="#aktualnosci" class="rectangle" id="rectangle_1" style="margin-top: 0px;"></a>
-                        <a href="#o_nas" class="rectangle" id="rectangle_2"></a>
-                        <a href="#" class="rectangle" id="rectangle_3"></a>
-                        <a href="#" class="rectangle" id="rectangle_4"></a>
-                    </div>
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-twitter"></a>
@@ -56,6 +55,31 @@
                     <h3>Naszą misją jest skuteczne wspieranie rozwoju e-sportu. Pragniemy zbudować przestrzeń, w której każdy będzie mógł realizować się w naszej wspólnej pasji, biorąc udział we wszelkiego rodzaju eventach, szkoląc się, czy po prostu będąc częścią niepowtarzalnej społeczności</h3>
                     <button>Lorem ipsum</button>
                 </article>
+                <!-- <div class="tytul_dzialanosci">
+                    <h1>Obszary naszej działalności</h1>
+                </div>
+                <div class="zbior_pol_dzialanosci">
+                    <div class="pole_dzialalnosci">
+                        <img src="turnieje.PNG" alt="" style="width: 200px; height: 100px;">
+                        <h1>Turnieje</h1>
+                        <h3>Rywalizacja między graczami w duchu fair-play. Rozgrywki otwarte dla każdego.</h3>
+                    </div>
+                    <div class="pole_dzialalnosci">
+                        <img src="promocja.PNG" alt="" style="width: 200px; height: 100px;">
+                        <h1>Promocja</h1>
+                        <h3>Promowanie graczy, twórców, artystów oraz grafików z społeczności e-sportowej. Rozwój poprzez promocję w social mediach.</h3>
+                    </div>
+                    <div class="pole_dzialalnosci">
+                        <img src="rozwoj.PNG" alt="" style="width: 200px; height: 100px;">
+                        <h1>Rozwój</h1>
+                        <h3>Edukacja graczy poprzez szkolenia z ekspertami. Turnusy, obozy gamingowe i wiele innych z myślą o graczach.</h3>
+                    </div>
+                    <div class="pole_dzialalnosci">
+                        <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                        <h1>Eventy </h1>
+                        <h3>Organizacja wydarzeń i imprez związanych z gamingiem. Prelekcje, rozmowy, meety z gwiazdami świata e-sportu.</h3>
+                    </div>
+                </div> -->
             </section>
         </div>
             <div id="left_side">
@@ -116,7 +140,7 @@
                         rectangle_1.classList.add("change_color_rectangle");
                         form.classList.remove("animation_show");
                         form.classList.add("hide")
-                        obraz.classList.remove("hide")
+                        obraz.classList.remove("animation_back")
                         // obraz.classList.add("animation_show")
                         obraz.classList.add("animation_move")
                     }
@@ -130,7 +154,7 @@
                     rectangle_1.classList.remove("change_color_rectangle");
                     rectangle_2.classList.add("change_color_rectangle");
                     obraz.classList.remove("animation_move")
-                    obraz.classList.add("hide")
+                    obraz.classList.add("animation_back")
                     form.classList.remove("hide");
                     form.classList.add("animation_show");
                     }
