@@ -9,166 +9,410 @@
     <title>PlayPoint</title>
 </head>
 <body>
-        <div id="container">
-            <nav class="navbar">
-                <img src="play_point_fulllogo.png" alt="">
-                <div>
-                    <a href="#aktualnosci"><h2>Aktualności</h2></a>
-                    <a href="#o_nas"><h2>O nas</h2></a>
-                    <a href="#darczyncy"><h2>Darczyńcy</h2></a>
-                    <a href="#kontakt"><h2>Kontakt</h2></a>
-                    <a href="#materialy"><h2>Materiały</h2></a>
-                    <a href="#wesprzyj"><h2>Wesprzyj</h2></a>
-                </div>
-            </nav>
-            <div class="nawigatory">
-                <a href="#aktualnosci" class="rectangle" id="rectangle_1" style="margin-top: 0px;"></a>
-                <a href="#o_nas" class="rectangle" id="rectangle_2"></a>
-                <a href="#" class="rectangle" id="rectangle_3"></a>
-                <a href="#" class="rectangle" id="rectangle_4"></a>
+    <div id="container">
+        <!-- NAWIGATORY----------------------------------------------------------------------------------------- -->
+        <nav class="navbar">
+            <a href="#main" style="height: 60%;"><img src="play_point_fulllogo.png" alt=""></a>
+            <div>
+                <a href="#aktualnosci"><h2>Aktualności</h2></a>
+                <a href="#darczyncy"><h2>Darczyńcy</h2></a>
+                <a href="#o_nas"><h2>O nas</h2></a>
+                <a href="#kontakt"><h2>Kontakt</h2></a>
+                <a href="#materialy"><h2>Materiały</h2></a>
+                <a href="#wesprzyj"><h2>Wesprzyj</h2></a>
             </div>
-            <div id="right_side">
-                <div id="player_container" class="player_container hide">
-                    <img id="player" src="https://pro-gamer.pl/wp-content/uploads/2020/09/pro-gamer-to-gracze-1.jpg" alt="">
-                </div>
-                <div id="social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                </div>
-                <div id="newsletter" class="newsletter hide">
-                    <h2>Dołącz do naszego newslettera, aby być na bierząco z naszymi:</h2>
-                    <h3>turniejami</h3>
-                    <h3>konkursami</h3>
-                    <h3>informacjami</h3>
-                    <input type="text" id="gmail" placeholder="Podaj swój adres e-mail">
-                    <button id="bt_gmail">Dołącz</button>
-                </div>
-            </div>
-        
-        <div id="left_side" style="padding-top: 10vh;">
-            <section id="aktualnosci">
-                <article>
-                    <!-- <h4>lorem ipsum dolor</h4> -->
-                    <h1>Zrób krok w przyszłość, odkryj e-sport na nowo</h1>
-                    <h3>Naszą misją jest skuteczne wspieranie rozwoju e-sportu. Pragniemy zbudować przestrzeń, w której każdy będzie mógł realizować się w naszej wspólnej pasji, biorąc udział we wszelkiego rodzaju eventach, szkoląc się, czy po prostu będąc częścią niepowtarzalnej społeczności</h3>
-                    <button>Lorem ipsum</button>
-                </article>
-                <!-- <div class="tytul_dzialanosci">
-                    <h1>Obszary naszej działalności</h1>
-                </div>
-                <div class="zbior_pol_dzialanosci">
-                    <div class="pole_dzialalnosci">
-                        <img src="turnieje.PNG" alt="" style="width: 200px; height: 100px;">
-                        <h1>Turnieje</h1>
-                        <h3>Rywalizacja między graczami w duchu fair-play. Rozgrywki otwarte dla każdego.</h3>
-                    </div>
-                    <div class="pole_dzialalnosci">
-                        <img src="promocja.PNG" alt="" style="width: 200px; height: 100px;">
-                        <h1>Promocja</h1>
-                        <h3>Promowanie graczy, twórców, artystów oraz grafików z społeczności e-sportowej. Rozwój poprzez promocję w social mediach.</h3>
-                    </div>
-                    <div class="pole_dzialalnosci">
-                        <img src="rozwoj.PNG" alt="" style="width: 200px; height: 100px;">
-                        <h1>Rozwój</h1>
-                        <h3>Edukacja graczy poprzez szkolenia z ekspertami. Turnusy, obozy gamingowe i wiele innych z myślą o graczach.</h3>
-                    </div>
-                    <div class="pole_dzialalnosci">
-                        <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
-                        <h1>Eventy </h1>
-                        <h3>Organizacja wydarzeń i imprez związanych z gamingiem. Prelekcje, rozmowy, meety z gwiazdami świata e-sportu.</h3>
-                    </div>
-                </div> -->
-            </section>
+        </nav>
+        <div class="nawigatory">
+            <a href="#main" class="rectangle" id="rectangle_1" style="margin-top: 0px;"></a>
+            <a href="#aktualnosci" class="rectangle" id="rectangle_2"></a>
+            <a href="#o_nas" class="rectangle" id="rectangle_3"></a>
+            <a href="#" class="rectangle" id="rectangle_4"></a>
+            <a href="#" class="rectangle" id="rectangle_5"></a>
+            <a href="#" class="rectangle" id="rectangle_6"></a>
+            <a href="#" class="rectangle" id="rectangle_7"></a>
         </div>
-            <div id="left_side">
-                <section id="o_nas" class="o_nas">
-                    <div class="tytul_dzialanosci">
-                        <h1>Obszary naszej działalności</h1>
+        <!-- --------------------------------------------------------------------------------------------------- -->
+        <!-- Podział strony na dwie części---------------------------------------------------------------------- -->
+        <div id="two_parts">
+            <!-- Prawa strona -------------------------------------------------------------------------------------- -->
+            <div id="right_side" class="right_side">
+                <section>
+                    <div id="player_container" class="player_container hide">
+                        <!-- <img id="player" src="https://pro-gamer.pl/wp-content/uploads/2020/09/pro-gamer-to-gracze-1.jpg" alt=""> -->
                     </div>
-                    <div class="zbior_pol_dzialanosci">
-                        <div class="pole_dzialalnosci">
-                            <img src="turnieje.PNG" alt="" style="width: 200px; height: 100px;">
-                            <h1>Turnieje</h1>
-                            <h3>Rywalizacja między graczami w duchu fair-play. Rozgrywki otwarte dla każdego.</h3>
+                    <div id="social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+                    <div id="newsletter" class="newsletter">
+                        <h2>Dołącz do naszego newslettera, aby być na bierząco z naszymi:</h2>
+                        <h3>turniejami</h3>
+                        <h3>konkursami</h3>
+                        <h3>informacjami</h3>
+                        <input type="text" id="gmail" placeholder="Podaj swój adres e-mail">
+                        <button id="bt_gmail">Dołącz</button>
+                    </div>
+                </section>
+            </div>
+            <!-- --------------------------------------------------------------------------------------------------- -->
+            <!-- Lewa strona --------------------------------------------------------------------------------------- -->
+            <div id="left_side">
+                <section id="main" class="scroll">
+                    <div class="workfield">
+                        <div id="misja" class="polowa">
+                            <article>
+                                <br><h4>lorem ipsum dolor</h4>
+                                <h1>Zrób krok w przyszłość, odkryj e-sport na nowo</h1>
+                                <h3>Naszą misją jest skuteczne wspieranie rozwoju e-sportu. Pragniemy zbudować przestrzeń, w której każdy będzie mógł realizować się w naszej wspólnej pasji, biorąc udział we wszelkiego rodzaju eventach, szkoląc się, czy po prostu będąc częścią niepowtarzalnej społeczności</h3>
+                                <button>Wesprzyj?</button>
+                            </article>
                         </div>
-                        <div class="pole_dzialalnosci">
-                            <img src="promocja.PNG" alt="" style="width: 200px; height: 100px;">
-                            <h1>Promocja</h1>
-                            <h3>Promowanie graczy, twórców, artystów oraz grafików z społeczności e-sportowej. Rozwój poprzez promocję w social mediach.</h3>
-                        </div>
-                        <div class="pole_dzialalnosci">
-                            <img src="rozwoj.PNG" alt="" style="width: 200px; height: 100px;">
-                            <h1>Rozwój</h1>
-                            <h3>Edukacja graczy poprzez szkolenia z ekspertami. Turnusy, obozy gamingowe i wiele innych z myślą o graczach.</h3>
-                        </div>
-                        <div class="pole_dzialalnosci">
-                            <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
-                            <h1>Eventy </h1>
-                            <h3>Organizacja wydarzeń i imprez związanych z gamingiem. Prelekcje, rozmowy, meety z gwiazdami świata e-sportu.</h3>
+                        <div id="dzialalnosc" class="polowa">
+                            <article>
+                                <div class="tytul_dzialanosci">
+                                    <br><h1>Obszary naszej działalności</h1>
+                                </div>
+                                <div class="zbior_pol_dzialanosci">
+                                    <div class="pole_dzialalnosci">
+                                        <img src="turnieje.PNG" alt="" style="width: 200px; height: 100px;">
+                                        <h1>Turnieje</h1>
+                                        <h3>Rywalizacja między graczami w duchu fair-play. Rozgrywki otwarte dla każdego.</h3>
+                                    </div>
+                                    <div class="pole_dzialalnosci">
+                                        <img src="promocja.PNG" alt="" style="width: 200px; height: 100px;">
+                                        <h1>Promocja</h1>
+                                        <h3>Promowanie graczy, twórców, artystów oraz grafików z społeczności e-sportowej. Rozwój poprzez promocję w social mediach.</h3>
+                                    </div>
+                                    <div class="pole_dzialalnosci">
+                                        <img src="rozwoj.PNG" alt="" style="width: 200px; height: 100px;">
+                                        <h1>Rozwój</h1>
+                                        <h3>Edukacja graczy poprzez szkolenia z ekspertami. Turnusy, obozy gamingowe i wiele innych z myślą o graczach.</h3>
+                                    </div>
+                                    <div class="pole_dzialalnosci">
+                                        <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                        <h1>Eventy </h1>
+                                        <h3>Organizacja wydarzeń i imprez związanych z gamingiem. Prelekcje, rozmowy, meety z gwiazdami świata e-sportu.</h3>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </section>
+                <section id="aktualnosci" class="scroll">
+                    <div class="workfield">
+                        <div class="skroty_aktualnosci">
+                            <div class="pola_aktualnosci">
+                                <div class="obraz">
+                                    <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                </div>
+                                <div class="tekst">
+                                    32413 123512 3123 4123512 35
+                                </div>
+                                <div class="przycisk">
+                                    <button>Czytaj dalej</button>
+                                </div>
+                            </div>
+                            <div class="pola_aktualnosci">
+                                <div class="obraz">
+                                    <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                </div>
+                                <div class="tekst">
+                                    32413 123512 3123 4123512 35
+                                </div>
+                                <div class="przycisk">
+                                    <button>Czytaj dalej</button>
+                                </div>
+                            </div>
+                            <div class="pola_aktualnosci" style="margin-right: 0px;">
+                                <div class="obraz">
+                                    <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                </div>
+                                <div class="tekst">
+                                    32413 123512 3123 4123512 35
+                                </div>
+                                <div class="przycisk">
+                                    <button>Czytaj dalej</button>
+                                </div></div>
+                        </div>
+                        <div class="przycisk">
+                            <button>Zobacz wszystkie</button>
+                        </div>
+                    </div>
+                </section>
+                <section id="darczyncy" class="scroll">
+                    <div class="workfield">
+                        <h1>Nasi Darczyńcy</h1>
+                        <div class="table_box">
+                            <div style="width: 100%; background-color: #3728a5;">
+                                <table>
+                                    <tr>
+                                        <th>
+                                            <h1>Tytuł</h1>
+                                        </th>
+                                        <th>
+                                            <h1>Kwota</h1>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="table_overflow">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h1>Dawid</h1>
+                                        </td>
+                                        <td>
+                                            <h1>100zł</h1>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
+        <!-- --------------------------------------------------------------------------------------------------- -->
+        <!-- O nas --------------------------------------------------------------------------------------------- -->
+        <div id="o_nas" class="new_page scroll">
+            <div class="workfield_new_page">
+                <div class="main_positioning">
+                    <div class="zarzad_positioning">
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_1, people_1)" onmouseout="outhover(image_1, people_1)">
+                                    <img id="image_1" src="czlowiek.PNG" alt="">
+                                    <div id="people_1" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_2, people_2)" onmouseout="outhover(image_2, people_2)">
+                                    <img id="image_2" src="czlowiek.PNG" alt="">
+                                    <div id="people_2" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_3, people_3)" onmouseout="outhover(image_3, people_3)">
+                                    <img id="image_3" src="czlowiek.PNG" alt="">
+                                    <div id="people_3" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_4, people_4)" onmouseout="outhover(image_4, people_4)">
+                                    <img id="image_4" src="czlowiek.PNG" alt="">
+                                    <div id="people_4" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_5, people_5)" onmouseout="outhover(image_5, people_5)">
+                                    <img id="image_5" src="czlowiek.PNG" alt="">
+                                    <div id="people_5" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rada_positioning">
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_6, people_6)" onmouseout="outhover(image_6, people_6)">
+                                    <img id="image_6" src="czlowiek.PNG" alt="">
+                                    <div id="people_6" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_7, people_7)" onmouseout="outhover(image_7, people_7)">
+                                    <img id="image_7" src="czlowiek.PNG" alt="">
+                                    <div id="people_7" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                        <div class="box_positioning">
+                            <div class="people_box">
+                                <div class="photo" onmouseover="hover(image_8, people_8)" onmouseout="outhover(image_8, people_8)">
+                                    <img id="image_8" src="czlowiek.PNG" alt="">
+                                    <div id="people_8" class="description_people">wegt\ahgaer aehrbaeha ehtrateh</div>
+                                </div>
+                                <div class="name">Jan Kowalski</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsorzy_positioning">
+                <img src="sponsor.PNG" alt="" style="height: 6vh; width: auto;">
+                <img src="sponsor.PNG" alt="" style="height: 6vh; width: auto;">
+                <img src="sponsor.PNG" alt="" style="height: 6vh; width: auto;">
+                <img src="sponsor.PNG" alt="" style="height: 6vh; width: auto;">
+                <img src="sponsor.PNG" alt="" style="height: 6vh; width: auto; margin-right: 0px;">
+            </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-            const form = document.querySelector(".newsletter");
-            const obraz = document.querySelector(".player_container");
-            const sectionTwo = document.querySelector(".o_nas");
-            const rectangle_1 = document.querySelector("#rectangle_1");
-            const rectangle_2 = document.querySelector("#rectangle_2");
-            const rectangle_3 = document.querySelector("#rectangle_3");
-            const rectangle_4 = document.querySelector("#rectangle_4");
-
-            let ilosc = 0
-
-            const options = {
-            threshold: 0,
-            rootMargin: "-350px"
-            };
-
-            const observer = new IntersectionObserver(function(
-            entries,
-            observer
-            ) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    if (ilosc>0) {
-                        rectangle_2.classList.remove("change_color_rectangle");
-                        rectangle_1.classList.add("change_color_rectangle");
-                        form.classList.remove("animation_show");
-                        form.classList.add("hide")
-                        obraz.classList.remove("animation_back")
-                        // obraz.classList.add("animation_show")
-                        obraz.classList.add("animation_move")
-                    }
-                    else {
-                        obraz.classList.remove("hide");
-                        rectangle_1.classList.add("change_color_rectangle");
-                        ilosc+=1;
-                    }
-                } else {
-                    if (ilosc>0) {
-                    rectangle_1.classList.remove("change_color_rectangle");
-                    rectangle_2.classList.add("change_color_rectangle");
-                    obraz.classList.remove("animation_move")
-                    obraz.classList.add("animation_back")
-                    form.classList.remove("hide");
-                    form.classList.add("animation_show");
-                    }
-                    else {
-                        rectangle_2.classList.add("change_color_rectangle");
-                        form.classList.remove("hide");
-                        ilosc+=1;
-                    }
-                }
-            });
-            },
-            options);
-
-            observer.observe(sectionTwo);
-        </script> 
+        <!-- --------------------------------------------------------------------------------------------------- -->
+        <!-- O nas --------------------------------------------------------------------------------------------- -->
+        <div id="kontakt" class="new_page scroll">
+            <div class="workfield_new_page">
+                <h3>E-mail: mail@wp.pl</h3>
+                <h3>Numer telefonu: 141 212 234</h3>
+                <h3>Adres: przykładowa ulica 3/4</h3>
+                <h3>NIP: 9222367183</h3>
+                <h3>REGON: 950427384</h3>
+                <h3>KRS: 0000133156</h3>
+                <h3>Godziny pracy:</h3>
+                <h3>Poniedziałek-Piątek: 7:00-18:00</h3>
+                <h3>Sobota: 10:00-17:00</h3>
+                <img src="google_map.jpg" alt="" style="height: 200px; width: 400px;">
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------- -->
+        <!-- Materialy ------------------------------------------------------------------------------------------ -->
+        <div id="materialy" class="new_page scroll">
+            <div class="workfield_new_page">
+                <h3>Nie mam pojęcia co tutaj ma być więc narazie tego nie robimy</h3>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------- -->
+        <!-- Wesprzyj ------------------------------------------------------------------------------------------ -->
+        <div id="wesprzyj" class="new_page scroll">
+            <div class="workfield_new_page">
+                <h3>1</h3>
+                <h3>2</h3>
+                <h3>3</h3>
+                <h3>Będę to ogarniał po weekendzie</h3>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------- -->
+    </div>
+    <script>
+        function hover(main_photo, main_description) {
+            main_photo.style.filter = "blur(5px)"
+            main_description.style.visibility = "visible"
+        }
+        function outhover(main_photo, main_description) {
+            main_photo.style.filter = "blur(0px)"
+            main_description.style.visibility = "hidden"
+        }
+    </script>
 </body>
 </html>

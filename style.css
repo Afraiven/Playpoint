@@ -12,17 +12,14 @@
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #cecbcb;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #29008a71
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -46,16 +43,14 @@
     font-size: 35px;
 }
 
-* {
+/* MAIN CSS --------------------------------------------------------------------- */
+body {
+    overflow: hidden;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #f2f0fb;
 }
-
-body {
-    height: 100vh;
-    overflow: hidden;
-}
-
 #container {
     width: 100%;
     height: 100%;
@@ -64,10 +59,13 @@ body {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
-
+.scroll {
+    scroll-snap-align: center;
+}
+/* Navbar --------------------------------------------------------------------- */
 .navbar {
     position: fixed;
-    width: 70%;
+    width: calc(100% - 10px);
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -85,28 +83,37 @@ body {
     text-decoration: none;
 }
 .navbar img {
-    height: 60%;
+    height: 100%;
     margin-left: 3vw;
 }
 nav div {
     margin-right: 3vw;
+    margin-right: 5%;
 }
 nav div h2{
     float: left;
     margin-left: 2vw;
 }
-
-
-#right_side {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    position: fixed;
-    right: 0px;
-    width: calc(30% - 10px);
-    height: 100vh;
-    background-image: linear-gradient(#3728a5, #7b4cbb);
-    margin-right: 10px;
+/* ---------------------------------------------------------------------------- */
+/* Right side ----------------------------------------------------------------- */
+#two_parts {
+    height: 300vh;
+    position: relative;
 }
-
+#right_side {
+    height: 100%;
+    width: calc(30% - 8px);
+    position: relative;
+    float: right;
+}
+#right_side section {
+    height: calc(100% / 3);
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    position: sticky;
+    background-image: linear-gradient(#3728a5, #7b4cbb);
+    top: 0px;
+}
 #player_container {
     position: absolute;
     margin-top: 16vh;
@@ -125,7 +132,6 @@ nav div h2{
     width: 100%;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
-
 #social {
     position: fixed;
     bottom: 3vh;
@@ -136,42 +142,8 @@ nav div h2{
     justify-content: center;
     align-items: center;
     align-content: center;
-    z-index: 101;
+    z-index: 103;
 }
-
-.nawigatory {
-    position: fixed;
-    top: 45%;
-    width: 60px;
-    height: 80px;
-    display: inline-flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.rectangle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white;
-    display:inline-block;
-    border: 1px rgb(65, 10, 102) solid;
-    margin-top: 7px;
-}
-
-.rectangle:hover {
-    background-color: #7b4cbb;
-    border: 1px rgb(49, 8, 77) solid;
-}
-
-.change_color_rectangle {
-    background-color: rgb(65, 10, 102);
-    border: 1px rgb(49, 8, 77) solid;
-}
-
 .newsletter {
     height: 100%;
     width: 100%;
@@ -192,7 +164,6 @@ nav div h2{
     border-radius: 4px;
     box-sizing: border-box;
 }
-
 #bt_gmail {
     width: 20%;
     background-color: #402099;
@@ -201,12 +172,10 @@ nav div h2{
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-  
+} 
 #bt_gmail:hover {
     background-color: #240d63;
 }
-
 .newsletter h2 {
     width: 80%;
     padding-bottom: 10px;
@@ -217,115 +186,41 @@ nav div h2{
     padding-bottom: 5px;
     color: white;
 }
-
-.hide {
-    opacity:0;
-    left:-100%;
-    visibility: hidden;
-}
-
-.animation_show {
-    animation: Show 1s forwards;
-}
-
-.animation_move {
-    animation: Move 0.7s forwards;
-}
-
-.animation_back {
-    animation: Back 0.7s forwards;
-}
-
-@keyframes Show {
-        0%{
-            visibility: hidden;
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
-@keyframes Move {
-    0%{
-        transform: translateX(20vw);
-        opacity: 1;
-        visibility: visible;
-        }
-    }
-
-@keyframes Back {
-    100%{
-        transform: translateX(60vw);
-        opacity: 0;
-        visibility: hidden;
-        }
-    }
-
-
+/* ---------------------------------------------------------------------------- */
+/* Left side ------------------------------------------------------------------ */
 #left_side {
-    width: calc(70% + 10px);
-    height: calc(100% - 10vh);
-    background-color: #f2f0fb;
-    scroll-snap-align: center;
-}
-
-
-#left_side section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
+    width: calc(70% + 8px);
     height: 100%;
+    position: relative;
+    float: right;
 }
-
-
-#left_side section article{
-    width: 50%;
-    min-height: 60%;
-    padding-right: 20%;
+#left_side section {
+    height: calc(100% / 3);
+    background-color: #f2f0fb;
 }
-
-
-#left_side section article h1{
-    font-size: 2em;
-    margin-top: 1vh;
+#left_side section .workfield{
+    padding-top: 10vh;
+    height: calc(100% - 10vh);
 }
-
-#left_side section article h3{
-    opacity: 0.5
+#left_side #main .workfield {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 }
-#left_side section article h4{
-    color: #e978bc;
-    margin-bottom: 0;
+#left_side #main .workfield .polowa{
+width: 100%;
+height: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
 }
-#left_side section article button{
-    letter-spacing: 2px;
-	background: none;
-	color: #e978bc;
-	padding: 16px;
-	cursor: pointer;
-    border-radius: 50px;
-    border: 2px solid #e978bc;
-    font-size: 1.2em;
-    margin-top: 2vh;
-    transition: all .3s;
-}
-#left_side section article button:hover { 
-    background-color: #e978bc;
-    color: white;
-}
-
-#left_side .o_nas {
-align-content: flex-start;
-}
-.tytul_dzialanosci{
-    margin-top: 8%;
-    margin-bottom: 5%;
+#left_side #main article{
+    width: 80%;
+    height: 80%;
 }
 .zbior_pol_dzialanosci {
     display: flex;
@@ -340,9 +235,275 @@ align-content: flex-start;
     text-align: center;
     margin-right: 4%;
 }
-
 .pole_dzialalnosci h1 {
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
+#left_side section .workfield h1{
+    font-size: 2em;
+    margin-top: 1vh;
+}
+#left_side section .workfield h3{
+    opacity: 0.5
+}
+#left_side section .workfield h4{
+    color: #e978bc;
+    margin-bottom: 0;
+}
+#left_side section .workfield button{
+    letter-spacing: 2px;
+	background: none;
+	color: #e978bc;
+	padding: 16px;
+	cursor: pointer;
+    border-radius: 50px;
+    border: 2px solid #e978bc;
+    font-size: 1.2em;
+    margin-top: 2vh;
+    transition: all .3s;
+}
+#left_side section .workfield button:hover { 
+    background-color: #e978bc;
+    color: white;
+}
+
+
+#left_side #aktualnosci .workfield {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.skroty_aktualnosci{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.pola_aktualnosci{
+    width: 20%;
+    height: 75%;
+    border: 1px solid black;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+.przycisk{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#left_side #aktualnosci .obraz {
+width: 100%;
+height: 20%;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+#left_side #aktualnosci .tekst {
+    width: 80%;
+    height: 50%;
+    margin-top: 10%;
+}
+#left_side #aktualnosci .przycisk {
+    width: 100%;
+    height: 20%;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Nawigacja po lewej --------------------------------------------------------- */
+.nawigatory {
+    position: fixed;
+    top: 45%;
+    width: 60px;
+    height: 126px;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 101;
+}
+.rectangle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display:inline-block;
+    border: 1px rgb(65, 10, 102) solid;
+    margin-top: 7px;
+}
+.rectangle:hover {
+    background-color: #7b4cbb;
+    border: 1px rgb(49, 8, 77) solid;
+}
+.change_color_rectangle {
+    background-color: rgb(65, 10, 102);
+    border: 1px rgb(49, 8, 77) solid;
+}
+/* ---------------------------------------------------------------------------- */
+/* Left side ------------------------------------------------------------------ */
+/* Table ---------------------------------------------------------------------- */
+#left_side #darczyncy .workfield {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.table_box{
+    width: 70%;
+    height: 60%;
+    outline: 1px solid black;
+}
+.table_overflow{
+    width: 100%;
+    height: calc(90% - 1px);
+    overflow-y:auto;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+
+}
+table h1{
+    padding-left: 10px;
+    font-size: 20px!important;
+}
+  th, td {
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+    width: 50%;
+
+  }
+  th{
+      color: white;
+      border: 1px solid #3728a5;
+      background-color: #3728a5;
+  }
+/* ---------------------------------------------------------------------------- */
+.new_page{
+    width: calc(100vw - 10px);
+    height: 100vh;
+    position: relative;
+}
+.workfield_new_page{
+    padding-top: 10vh;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: calc(100% - 10vh);
+    width: calc(100% - 120px);
+}
+/* O nas ---------------------------------------------------------------------- */
+.main_positioning {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+#o_nas .zarzad_positioning {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 46%;
+    width: 100%;
+}
+#o_nas .rada_positioning {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 46%;
+    width: 100%;
+}
+#o_nas .sponsorzy_positioning {
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: calc(8% - 2px);
+    width: 100%;
+    background-color: rgb(65, 10, 102);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#o_nas .sponsorzy_positioning img{
+    margin-right: 3vw;
+}
+#o_nas .box_positioning{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#o_nas .people_box {
+    width: 80%;
+    height: 80%;
+}
+#o_nas .photo{
+width: 100%;
+height: 80%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#o_nas .name{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#o_nas img{
+    width: 100%;
+    height: 100%;
+}
+#o_nas .description_people {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    visibility: hidden;
+}
+/* ---------------------------------------------------------------------------- */
+/* Wesprzyj ------------------------------------------------------------------- */
