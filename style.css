@@ -28,6 +28,10 @@ time, mark, audio, video {
     src: url("fonts/Cocogoose Pro Thin-trial.ttf");
 }
 
+html > div[style] {
+    display: none !important;
+  }
+
 /* CUSTOMOWY SCROLLBAR*/
 /* width */
 ::-webkit-scrollbar {
@@ -126,6 +130,7 @@ nav div h2{
     width: calc(30% - 8px);
     position: relative;
     float: right;
+    z-index: 99;
 }
 #right_side section {
     height: calc(100% / 3);
@@ -137,21 +142,40 @@ nav div h2{
 }
 #player_container {
     position: absolute;
-    margin-top: 16vh;
-    margin-left: -15vw;
+    margin-top: 10vh;
+    margin-left: -10vw;
     width: 35vw;
     height: 30vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    align-content: center;
+    align-content: flex-start;
+    transition: .2s;
 }
 #player {
-    /* height: 61vh; */
+    margin-top: 10vh;
+    height: 60%;
     width: 100%;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    transition: .2s;
+    /* transition-delay: 0.2s !important; */
+    z-index: 110;
+    display: flex;
+}
+.hide{
+    transition-delay: 0.2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0px !important;
+    z-index: 1 !important;
+}
+.show{
+    transition-delay: 0.2 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 100 !important;
 }
 #social {
     position: absolute;
@@ -163,7 +187,7 @@ nav div h2{
     justify-content: center;
     align-items: center;
     align-content: center;
-    z-index: 103;
+    z-index: 100;
 }
 .newsletter {
     height: 100%;
@@ -174,7 +198,11 @@ nav div h2{
     justify-content: center;
     align-items: center;
     align-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
 }
+
 #gmail {
     width: 50%;
     height: 30px;
@@ -236,12 +264,13 @@ width: 100%;
 height: 50%;
 display: flex;
 justify-content: center;
-align-items: center;
+/* align-items: center; */
 align-content: center;
 }
 #left_side #main article{
-    width: 80%;
+    width: 60%;
     height: 80%;
+    margin-right: 5%;
 }
 .zbior_pol_dzialanosci {
     display: flex;
@@ -265,7 +294,7 @@ align-content: center;
     font-size: 2em;
     margin-top: 1vh;
 }
-#left_side section .workfield h3{
+#left_side section .workfield h3, h5{
     opacity: 0.5
 }
 #left_side section .workfield h4{
@@ -281,7 +310,6 @@ align-content: center;
     border-radius: 50px;
     border: 2px solid #e978bc;
     font-size: 1.2em;
-    margin-top: 2vh;
     transition: all .3s;
 }
 #left_side section .workfield button:hover { 
@@ -289,6 +317,9 @@ align-content: center;
     color: white;
 }
 
+#left_side section .workfield .tytul_dzialanosci { 
+    text-align: center;
+}
 
 #left_side #aktualnosci .workfield {
     display: flex;
@@ -302,49 +333,73 @@ align-content: center;
     width: 100%;
     height: 80%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 .pola_aktualnosci{
-    width: 20%;
-    height: 75%;
+    margin-top: 40px;
+    width: 75%;
+    height: 20%;
     border: 1px solid black;
-    margin-right: 3vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
 }
 .przycisk{
-    width: 100%;
-    height: 20%;
+    width: 20%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
+#left_side #aktualnosci img{
+    width: 100%;
+}
+
 #left_side #aktualnosci .obraz {
-width: 100%;
-height: 20%;
+width: 20%;
+height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 align-content: center;
 }
-#left_side #aktualnosci .tekst {
-    width: 80%;
-    height: 50%;
-    margin-top: 10%;
+#left_side #aktualnosci .tekst-box {
+    margin-left: 5%;
+    width: 50%;
+    height: 70%;
 }
-#left_side #aktualnosci .przycisk {
+#left_side #aktualnosci .tekst {
+    width: 100%;
+    max-height: 58%;
+    margin-bottom: 2%;
+}
+#left_side #aktualnosci .termin {
+    width: 100%;
+    height: 10%;
+}
+
+#left_side #aktualnosci .termin h5 {
+    margin: 0px;
+}
+
+#left_side #aktualnosci .box-przycisk {
     width: 100%;
     height: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -378,6 +433,11 @@ align-content: center;
 .change_color_rectangle {
     background-color: rgb(65, 10, 102);
     border: 1px rgb(49, 8, 77) solid;
+}
+
+.remove_change_color_rectangle {
+    background-color: white;
+    border: 1px rgb(65, 10, 102) solid;
 }
 /* ---------------------------------------------------------------------------- */
 /* Left side ------------------------------------------------------------------ */
@@ -526,5 +586,11 @@ align-items: center;
     width: 80%;
     visibility: hidden;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+    background-color: #240d63;
+  }
 /* ---------------------------------------------------------------------------- */
 /* Wesprzyj ------------------------------------------------------------------- */

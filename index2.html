@@ -25,11 +25,11 @@
         <div class="nawigatory">
             <a href="#main" class="rectangle" id="rectangle_1" style="margin-top: 0px;"></a>
             <a href="#aktualnosci" class="rectangle" id="rectangle_2"></a>
-            <a href="#o_nas" class="rectangle" id="rectangle_3"></a>
-            <a href="#" class="rectangle" id="rectangle_4"></a>
-            <a href="#" class="rectangle" id="rectangle_5"></a>
-            <a href="#" class="rectangle" id="rectangle_6"></a>
-            <a href="#" class="rectangle" id="rectangle_7"></a>
+            <a href="#darczyncy" class="rectangle" id="rectangle_3"></a>
+            <a href="#o_nas" class="rectangle" id="rectangle_4"></a>
+            <a href="#kontakt" class="rectangle" id="rectangle_5"></a>
+            <a href="#materialy" class="rectangle" id="rectangle_6"></a>
+            <a href="#wesprzyj" class="rectangle" id="rectangle_7"></a>
         </div>
         <!-- --------------------------------------------------------------------------------------------------- -->
         <!-- Podział strony na dwie części---------------------------------------------------------------------- -->
@@ -37,8 +37,13 @@
             <!-- Prawa strona -------------------------------------------------------------------------------------- -->
             <div id="right_side" class="right_side">
                 <section>
-                    <div id="player_container" class="player_container hide">
-                        <img id="player" src="https://pro-gamer.pl/wp-content/uploads/2020/09/pro-gamer-to-gracze-1.jpg" alt="">
+                    <div id="player_container" class="player_container">
+                        <div >
+                        <video id="player" width="auto" height="100%" controls>
+                            <source src="Film.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                          </video>
+                        </div>
                     </div>
                     <div id="social">
                         <a href="#" class="fa fa-facebook"></a>
@@ -62,38 +67,38 @@
                 <section id="main" class="scroll">
                     <div class="workfield">
                         <div id="misja" class="polowa">
-                            <article>
-                                <br><h4>lorem ipsum dolor</h4>
+                            <article style="margin-top: 10vh;">
+                                <!-- <br><h4>lorem ipsum dolor</h4> -->
                                 <h1>Zrób krok w przyszłość, odkryj e-sport na nowo</h1>
-                                <h3>Naszą misją jest skuteczne wspieranie rozwoju e-sportu. Pragniemy zbudować przestrzeń, w której każdy będzie mógł realizować się w naszej wspólnej pasji, biorąc udział we wszelkiego rodzaju eventach, szkoląc się, czy po prostu będąc częścią niepowtarzalnej społeczności</h3>
-                                <button>Wesprzyj?</button>
+                                <h3>Naszą misją jest skuteczne wspieranie rozwoju e-sportu. Pragniemy zbudować przestrzeń, w której każdy będzie mógł realizować się w naszej wspólnej pasji, biorąc udział we wszelkiego rodzaju eventach, szkoląc się, czy po prostu będąc częścią niepowtarzalnej społeczności.</h3>
+                                <!-- <button>Wesprzyj?</button> -->
                             </article>
                         </div>
                         <div id="dzialalnosc" class="polowa">
-                            <article>
+                            <article style="width: 100%; margin-left: 60px; margin-top: 40px;">
                                 <div class="tytul_dzialanosci">
                                     <br><h1>Obszary naszej działalności</h1>
                                 </div>
                                 <div class="zbior_pol_dzialanosci">
                                     <div class="pole_dzialalnosci">
                                         <img src="turnieje.PNG" alt="" style="width: 200px; height: 100px;">
-                                        <h1>Turnieje</h1>
-                                        <h3>Rywalizacja między graczami w duchu fair-play. Rozgrywki otwarte dla każdego.</h3>
+                                        <h2>Turnieje</h2>
+                                        <h5>Rywalizacja między graczami w duchu fair-play. Rozgrywki otwarte dla każdego.</h5>
                                     </div>
                                     <div class="pole_dzialalnosci">
                                         <img src="promocja.PNG" alt="" style="width: 200px; height: 100px;">
-                                        <h1>Promocja</h1>
-                                        <h3>Promowanie graczy, twórców, artystów oraz grafików z społeczności e-sportowej. Rozwój poprzez promocję w social mediach.</h3>
+                                        <h2>Promocja</h2>
+                                        <h5>Promowanie graczy, twórców, artystów oraz grafików z społeczności e-sportowej. Rozwój poprzez promocję w social mediach.</h5>
                                     </div>
                                     <div class="pole_dzialalnosci">
                                         <img src="rozwoj.PNG" alt="" style="width: 200px; height: 100px;">
-                                        <h1>Rozwój</h1>
-                                        <h3>Edukacja graczy poprzez szkolenia z ekspertami. Turnusy, obozy gamingowe i wiele innych z myślą o graczach.</h3>
+                                        <h2>Rozwój</h2>
+                                        <h5>Edukacja graczy poprzez szkolenia z ekspertami. Turnusy, obozy gamingowe i wiele innych z myślą o graczach.</h5>
                                     </div>
                                     <div class="pole_dzialalnosci">
                                         <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
-                                        <h1>Eventy </h1>
-                                        <h3>Organizacja wydarzeń i imprez związanych z gamingiem. Prelekcje, rozmowy, meety z gwiazdami świata e-sportu.</h3>
+                                        <h2>Eventy </h2>
+                                        <h5>Organizacja wydarzeń i imprez związanych z gamingiem. Prelekcje, rozmowy, meety z gwiazdami świata e-sportu.</h5>
                                     </div>
                                 </div>
                             </article>
@@ -105,10 +110,15 @@
                         <div class="skroty_aktualnosci">
                             <div class="pola_aktualnosci">
                                 <div class="obraz">
-                                    <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                    <img src="eventy.PNG">
                                 </div>
-                                <div class="tekst">
-                                    32413 123512 3123 4123512 35
+                                <div class="tekst-box">
+                                    <div class="tekst">
+                                        32413 123512 3123 4123512 35
+                                    </div>
+                                    <div class="termin">
+                                       <h5>12.05.2003</h5>
+                                    </div>
                                 </div>
                                 <div class="przycisk">
                                     <button>Czytaj dalej</button>
@@ -116,10 +126,15 @@
                             </div>
                             <div class="pola_aktualnosci">
                                 <div class="obraz">
-                                    <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                    <img src="eventy.PNG">
                                 </div>
-                                <div class="tekst">
-                                    32413 123512 3123 4123512 35
+                                <div class="tekst-box">
+                                    <div class="tekst">
+                                        32413 123512 3123 4123512 3532413 123512 3123 4123512 35 32413 123512 3123 4123512 35
+                                    </div>
+                                    <div class="termin">
+                                       <h5>12.05.2003</h5>
+                                    </div>
                                 </div>
                                 <div class="przycisk">
                                     <button>Czytaj dalej</button>
@@ -127,16 +142,21 @@
                             </div>
                             <div class="pola_aktualnosci" style="margin-right: 0px;">
                                 <div class="obraz">
-                                    <img src="eventy.PNG" alt="" style="width: 200px; height: 100px;">
+                                    <img src="eventy.PNG">
                                 </div>
-                                <div class="tekst">
-                                    32413 123512 3123 4123512 35
+                                <div class="tekst-box">
+                                    <div class="tekst">
+                                        32413 123512 3123 4123512 35
+                                    </div>
+                                    <div class="termin">
+                                       <h5>12.05.2003</h5>
+                                    </div>
                                 </div>
                                 <div class="przycisk">
                                     <button>Czytaj dalej</button>
                                 </div></div>
                         </div>
-                        <div class="przycisk">
+                        <div class="box-przycisk">
                             <button>Zobacz wszystkie</button>
                         </div>
                     </div>
@@ -384,7 +404,7 @@
                 <h3>Godziny pracy:</h3>
                 <h3>Poniedziałek-Piątek: 7:00-18:00</h3>
                 <h3>Sobota: 10:00-17:00</h3>
-                <img src="google_map.jpg" alt="" style="height: 200px; width: 400px;">
+                <div id="map"></div>
             </div>
         </div>
         <!-- --------------------------------------------------------------------------------------------------- -->
@@ -406,6 +426,10 @@
         </div>
         <!-- --------------------------------------------------------------------------------------------------- -->
     </div>
+    <!-- TRZEBA DODAĆ KARTĘ KREDYTOWĄ DO GOOGLE BY MAPA GOOGLE DZIAŁAŁA! -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy2hsge6U62nnTKxIDNUk9WUxLo_zYTIU&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script> -->
     <script>
         function hover(main_photo, main_description) {
             main_photo.style.filter = "blur(5px)"
@@ -415,6 +439,92 @@
             main_photo.style.filter = "blur(0px)"
             main_description.style.visibility = "hidden"
         }
+
+
+        function splitScroll(){
+            const controller = new ScrollMagic.Controller();
+
+            new ScrollMagic.Scene({
+                triggerElement: '#aktualnosci',
+                triggerHook: .9,
+            })
+            .setClassToggle('#player', 'hide')
+            // .addIndicators()
+            .addTo(controller);
+
+            new ScrollMagic.Scene({
+                triggerElement: '#aktualnosci',
+                triggerHook: .9,
+            })
+            .setClassToggle('#player_container', 'hide')
+            // .addIndicators()
+            .addTo(controller);
+
+            new ScrollMagic.Scene({
+                triggerElement: '#aktualnosci',
+                triggerHook: .9,
+            })
+            .setClassToggle('#newsletter', 'show')
+            .addTo(controller);
+
+            // LEFT NAVBAR ----------------------------------------------------------------------------------------------------------
+            var controller2 = new ScrollMagic.Controller({
+                globalSceneOptions: {duration: "100%"}
+            });
+            new ScrollMagic.Scene({
+                triggerElement: "#main"
+                })
+                .setClassToggle("#rectangle_1", "change_color_rectangle")
+                .addTo(controller2);
+            new ScrollMagic.Scene({
+                triggerElement: "#aktualnosci"
+                })
+                .setClassToggle("#rectangle_2", "change_color_rectangle")
+                .addTo(controller2);
+            new ScrollMagic.Scene({
+                triggerElement: "#darczyncy"
+                })
+                .setClassToggle("#rectangle_3", "change_color_rectangle")
+                .addTo(controller2);
+            new ScrollMagic.Scene({
+                triggerElement: "#o_nas"
+                })
+                .setClassToggle("#rectangle_4", "change_color_rectangle")
+                .addTo(controller2);
+            new ScrollMagic.Scene({
+                triggerElement: "#kontakt"
+                })
+                .setClassToggle("#rectangle_5", "change_color_rectangle")
+                .addTo(controller2);
+            new ScrollMagic.Scene({
+                triggerElement: "#materialy"
+                })
+                .setClassToggle("#rectangle_6", "change_color_rectangle")
+                .addTo(controller2);
+            new ScrollMagic.Scene({
+                triggerElement: "#wesprzyj"
+                })
+                .setClassToggle("#rectangle_7", "change_color_rectangle")
+                .addTo(controller2);
+        }
+        splitScroll();
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const playpoint = { lat: 51.765, lng: 18.093 };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: playpoint,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: playpoint,
+                map: map,
+            });
+        }
+
+        window.initMap = initMap;
     </script>
 </body>
 </html>
