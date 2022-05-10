@@ -60,6 +60,7 @@ html > div[style] {
     text-align: center;
     color: white;
     margin-left: 15px;
+    transition: all .5s;
   }
 .fa:hover {
     background: #6629ac;
@@ -75,6 +76,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f0fb;
+    font-family: "Cocogoose";
+    filter: invert(1);
 }
 #container {
     width: 100%;
@@ -83,6 +86,10 @@ body {
     overflow-y: scroll; 
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+}
+
+article h4 {
+    filter: invert(1);
 }
 .scroll {
     scroll-snap-align: center;
@@ -99,17 +106,19 @@ body {
     align-items: center;
     align-content: center;
     color: #868686;
-    font-family: 'CocogooseThin' !important;
+    font-family: 'Cocogoose' !important;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: white;
     z-index: 100;
 }
 .navbar a {
     text-decoration: none;
+    color: black;
 }
 .navbar img {
     height: 100%;
     margin-left: 3vw;
+    filter: invert(1);
 }
 nav div {
     margin-right: 3vw;
@@ -118,6 +127,7 @@ nav div {
 nav div h2{
     float: left;
     margin-left: 2vw;
+    font-size: 1.2em !important;
 }
 /* ---------------------------------------------------------------------------- */
 /* Right side ----------------------------------------------------------------- */
@@ -130,6 +140,7 @@ nav div h2{
     width: calc(30% - 8px);
     position: relative;
     float: right;
+    filter: invert(1);
     z-index: 99;
 }
 #right_side section {
@@ -137,7 +148,7 @@ nav div h2{
     width: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     position: sticky;
-    background-image: linear-gradient(#3728a5, #7b4cbb);
+    background-image: linear-gradient(rgb(185, 68, 146), rgb(158, 80, 192));
     top: 0px;
 }
 #player_container {
@@ -158,7 +169,7 @@ nav div h2{
     margin-top: 10vh;
     height: 60%;
     width: 100%;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    box-shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(255, 255, 255, 0.3) -10px 10px, rgba(255, 255, 255, 0.2) -15px 15px, rgba(255, 255, 255, 0.1) -20px 20px, rgba(255, 255, 255, 0.05) -25px 25px;
     transition: .2s;
     /* transition-delay: 0.2s !important; */
     z-index: 110;
@@ -200,6 +211,7 @@ nav div h2{
     align-content: center;
     opacity: 0;
     visibility: hidden;
+    font-family: 'CocogooseThin';
     transition: .2s;
 }
 
@@ -221,6 +233,7 @@ nav div h2{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: all .2s;
 } 
 #bt_gmail:hover {
     background-color: #240d63;
@@ -241,7 +254,6 @@ nav div h2{
     width: calc(70% + 8px);
     height: 100%;
     position: relative;
-    float: right;
 }
 #left_side section {
     height: calc(100% / 3);
@@ -258,19 +270,19 @@ nav div h2{
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    padding-right: 16%;
 }
 #left_side #main .workfield .polowa{
-width: 100%;
-height: 50%;
-display: flex;
-justify-content: center;
-/* align-items: center; */
-align-content: center;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
 }
 #left_side #main article{
-    width: 60%;
+    width: 76%;
     height: 80%;
-    margin-right: 5%;
 }
 .zbior_pol_dzialanosci {
     display: flex;
@@ -281,14 +293,23 @@ align-content: center;
     align-content: center;
 }
 .pole_dzialalnosci {
-    width: 16%;
+    width: 25%;
     text-align: center;
-    margin-right: 4%;
+}
+.pole_dzialalnosci img {
+    filter: invert(1);
+    object-fit: cover;
+    width: 80%;
+}
+
+#left_side #dzialalnosc{
+    width: 100%;
 }
 .pole_dzialalnosci h1 {
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }
 #left_side section .workfield h1{
     font-size: 2em;
@@ -317,9 +338,6 @@ align-content: center;
     color: white;
 }
 
-#left_side section .workfield .tytul_dzialanosci { 
-    text-align: center;
-}
 
 #left_side #aktualnosci .workfield {
     display: flex;
@@ -416,6 +434,7 @@ align-content: center;
     align-items: center;
     align-content: center;
     z-index: 101;
+    filter: invert(1);
 }
 .rectangle {
     width: 10px;
@@ -423,7 +442,7 @@ align-content: center;
     border-radius: 50%;
     background-color: white;
     display:inline-block;
-    border: 1px rgb(65, 10, 102) solid;
+    border: 1px rgb(137, 13, 221) solid;
     margin-top: 7px;
 }
 .rectangle:hover {
@@ -432,7 +451,7 @@ align-content: center;
 }
 .change_color_rectangle {
     background-color: rgb(65, 10, 102);
-    border: 1px rgb(49, 8, 77) solid;
+    border: 1px rgb(120, 39, 174) solid;
 }
 
 .remove_change_color_rectangle {
